@@ -1,10 +1,12 @@
-import React from 'react'
-
+import Appp from "./components/Appp"
+import Header from "./components/Header"
 const App = () => {
   return (
-    <div>
-      Hello Ecom
-    </div>
+    <>
+    <Header />
+      Hello 
+      <Appp />
+    </>
   )
 }
 
