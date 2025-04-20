@@ -1,7 +1,7 @@
 import React from 'react'
 import useFetchProducts from '../hooks/useFetchProducts'
 import ProductItem from './ProductItem';
-
+import "./ProductList.css"
 
 const ProductList = () => {
 
@@ -12,9 +12,9 @@ const ProductList = () => {
 
 
   return (
-    <div>
+    <div className='product-list-div' >
       <h2>Products</h2>
-      <div>
+      <div className='product-list' >
         {products.map(product => (
             <ProductItem key={product.id} product={product} />
         ))}
