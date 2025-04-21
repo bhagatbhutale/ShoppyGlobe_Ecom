@@ -3,6 +3,7 @@ import useFetchProducts from "../hooks/useFetchProducts";
 import ProductItem from "./ProductItem";
 import { useSelector } from "react-redux";
 import "./ProductList.css";
+import Footer from "./Footer";
 
 const ProductList = () => {
   const { products, loading, error } = useFetchProducts();
@@ -31,6 +32,7 @@ const ProductList = () => {
           ))}
         </div>
       </div>
+      <Footer />
     </>
   );
 };

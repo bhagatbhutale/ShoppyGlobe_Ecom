@@ -19,7 +19,7 @@ if (!product) return <div className="error">Product not found.</div>;
 
   return (
     <>
-    <h2 className='h2' >Product Detail</h2>
+      <h2 className="h2">Product Detail</h2>
       <div className="product-detail-container">
         <img
           src={product.thumbnail}
@@ -27,7 +27,9 @@ if (!product) return <div className="error">Product not found.</div>;
           className="detail-image"
         />
         <div className="detail-info">
-          <h2> <strong>Product name : </strong> {product.title}</h2>
+          <h2>
+            <strong>Product name:</strong> {product.title}
+          </h2>
           <p>
             <strong>Description:</strong> {product.description}
           </p>
@@ -44,15 +46,8 @@ if (!product) return <div className="error">Product not found.</div>;
             <strong>Rating:</strong> {product.rating} ⭐
           </p>
           <p>
-            <strong>Stocks : </strong>
-            {product.stock}
+            <strong>Stocks:</strong> {product.stock}
           </p>
-          {/* <button
-            className="add-to-cart-btn"
-            onClick={() => alert(`Added to cart`)}
-          >
-            Add to Cart
-          </button> */}
         </div>
       </div>
       <Link to="/">

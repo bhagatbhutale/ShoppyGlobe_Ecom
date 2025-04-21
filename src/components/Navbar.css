@@ -47,6 +47,7 @@
 .search-icon {
     position: relative;
     right: 25px;
+    cursor: pointer;
 }
 
 .cart-icon {

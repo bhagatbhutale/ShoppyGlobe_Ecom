@@ -108,4 +108,8 @@ background-color: coral;
   .detail-image {
     max-width: 90%;
   }
+
+.back-btn {
+  background-color: coral;
+}
 }

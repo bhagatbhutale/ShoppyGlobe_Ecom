@@ -18,7 +18,7 @@ const Navbar = () => {
     <div className="nav-div">
       <div className="navbar">
         <div className="left-logo">
-          <Link className="home-p" >
+          <Link className="home-p" to="/" >
             <h1>ShoppyGlobe</h1>
           </Link>
         </div>
