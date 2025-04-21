@@ -1,26 +1,40 @@
-import React from 'react'
-import useFetchProducts from '../hooks/useFetchProducts'
-import ProductItem from './ProductItem';
-import "./ProductList.css"
+
+import useFetchProducts from "../hooks/useFetchProducts";
+import ProductItem from "./ProductItem";
+import { useSelector } from "react-redux";
+import "./ProductList.css";
 
 const ProductList = () => {
+  const { products, loading, error } = useFetchProducts();
+  const searchTerm = useSelector((state) => state.search.searchTerm);
+  const selectedCategory = useSelector(
+    (state) => state.filter.selectedCategory
+  );
 
-    const { products, loading, error } = useFetchProducts();
-    
-    if(loading) return <h2>Loading Products...</h2>
-    if(error) return <h2>Error : {error}</h2>
+  if (loading) return <h2 className="loading" >Loading Products...</h2>;
+  if (error) return <h2>Error : {error}</h2>;
 
+  const filteredProducts = products.filter(
+    (product) =>
+      product.title.toLowerCase().includes(searchTerm.toLowerCase()) &&
+      (selectedCategory === "All" ||
+        product.category.toLowerCase() === selectedCategory.toLowerCase())
+  );
 
   return (
-    <div className='product-list-div' >
-      <h2>Products</h2>
-      <div className='product-list' >
-        {products.map(product => (
+    <>
+      <div className="product-list-div">
+        <h2>Products</h2>
+        <div className="product-list">
+          {filteredProducts.map((product) => (
             <ProductItem key={product.id} product={product} />
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
-  )
-}
+    </>
+  );
+};
 
-export default ProductList
+export default ProductList;
+
+

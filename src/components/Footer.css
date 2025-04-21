@@ -1,0 +1,18 @@
+.footer {
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1rem;
+  width: 100%;
+  position: absolute;
+  /* bottom: 0;
+  left: 0; */
+}
+
+@media (max-width: 478px) {
+  .footer {
+    width: 100%;
+  }
+}
+

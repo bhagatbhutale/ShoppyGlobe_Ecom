@@ -18,3 +18,32 @@
   gap: 1.5rem;
   justify-items: center;
 }
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15rem;
+}
+
+
+/* // MediaQuery  */ 
+
+@media (max-width : 478px) {
+
+  .product-list-div {
+    background-color: white;
+  }
+
+  .loading {
+    position: relative;
+    bottom: 90px;
+  }
+
+  .product-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

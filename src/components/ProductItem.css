@@ -10,6 +10,18 @@
   transition: transform 0.2s;
 }
 
+.discount {
+/* background-color: red; */
+padding: 7px 5px;
+border-radius: 50%;
+color: red;
+font-size: 1.5rem;
+background-color: antiquewhite;
+position: relative;
+font-weight: 900;
+left: 90px;
+}
+
 .product-card:hover {
   transform: translateY(-5px);
 }

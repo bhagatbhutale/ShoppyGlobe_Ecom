@@ -1,8 +1,29 @@
-import { Link } from "react-router-dom"
-import "./ProductItem.css"
-const ProductItem = ({product}) => {
+import { Link } from "react-router-dom";
+import "./ProductItem.css";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart, removeFromCart } from "../redux/cartSlice";
+import { useState } from "react";
+
+const ProductItem = ({ product }) => {
+  const dispatch = useDispatch();
+  const cartItems = useSelector((state) => state.cart.items);
+  const isInCart = cartItems.some((item) => item.id === product.id);
+
+  const [added, setAdded] = useState(false);
+
+const handleCartToggle = () => {
+  if (!isInCart) {
+    dispatch(addToCart(product));
+    setAdded(true);
+    setTimeout(() => setAdded(false), 3000); 
+  } else {
+    dispatch(removeFromCart(product.id));
+  }
+};
+
   return (
     <div className="product-card">
+      <span className="discount" >{product.discountPercentage}%</span>
       <img
         src={product.thumbnail}
         alt={product.title}
@@ -16,12 +37,12 @@ const ProductItem = ({product}) => {
         <Link to={`/product/${product.id}`}>
           <button className="view-btn">View Details</button>
         </Link>
-        <button  className="cart-btn">
-          Add to Cart
+        <button className="cart-btn" onClick={handleCartToggle}>
+          {isInCart ? "Remove from Cart" : "Add to Cart"}
         </button>
       </div>
     </div>
   );
-}
+};
 
 export default ProductItem;

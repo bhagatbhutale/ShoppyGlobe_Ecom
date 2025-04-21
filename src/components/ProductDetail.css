@@ -1,3 +1,9 @@
+.h2 {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+}
+
 .product-detail-container {
   display: flex;
   flex-wrap: wrap;
@@ -71,6 +77,21 @@ background-color: coral;
 
 .add-to-cart-btn:hover {
   background-color: #283593;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15rem;
+  font-size: 2rem;
+}
+.error {
+     display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15rem;
+  font-size: 3rem;
 }
 
 @media (max-width: 768px) {

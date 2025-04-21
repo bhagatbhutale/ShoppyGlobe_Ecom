@@ -1,0 +1,52 @@
+.order-success-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 20px;
+  text-align: center;
+}
+
+.order-success-heading {
+  font-size: 28px;
+  font-weight: bold;
+  color: #28a745;
+  margin-bottom: 30px;
+  animation: bounceIn 1.2s ease;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.order-success-btn {
+  padding: 12px 25px;
+  font-size: 16px;
+  background-color: #e76f6f;
+  color: white;
+
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.order-success-btn:hover {
+  background-color: transparent;
+  color: black;
+}
+
+.order-success-link {
+  text-decoration: none;
+}

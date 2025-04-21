@@ -1,3 +1,6 @@
 19-04-25 
 Project Started -->
 - Fetching data from API
+
+20-04-25 --> today work started 
+mostly frontend is done
