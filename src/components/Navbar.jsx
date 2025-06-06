@@ -1,11 +1,18 @@
 import React from "react";
+
+// Icon Used 
 import { IoCartOutline } from "react-icons/io5";
 import { FaSearch } from "react-icons/fa";
 import { Link } from "react-router-dom";
+
+// reduc used
+
 import { useDispatch, useSelector } from "react-redux";
 import { setSearchTerm } from "../redux/searchSlice";
 import "./Navbar.css";
 
+
+// This is a Navbar of the webpage
 const Navbar = () => {
   
   const cartCount = useSelector((state) =>

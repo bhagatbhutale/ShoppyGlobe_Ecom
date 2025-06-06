@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./CartItem.css";
+// use Redux
 import { useDispatch } from "react-redux";
 import { removeFromCart, updateCartItem } from "../redux/cartSlice";
 
+// cartItem component
 const CartItem = ({ item }) => {
   const dispatch = useDispatch();
   const [quantity, setQuantity] = useState(item.quantity || 1);
@@ -46,6 +48,7 @@ const CartItem = ({ item }) => {
               className="quantity-input"
             />
           </div>
+          {/* // add cart and remove cart button */}
           <button
             className="remove-btn"
             onClick={() => dispatch(removeFromCart(item.id))}

@@ -6,6 +6,8 @@ const Header = lazy(() => import("./Header"));
 const ProductList = lazy(() => import("./ProductList"));
 const Footer = lazy(() => import("./Footer"));
 
+
+// this is a Appp component loading Header, Products, Footer 
 const Appp = () => {
   return (
     <div className="appp">

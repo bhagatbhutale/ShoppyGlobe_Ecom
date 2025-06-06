@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { addToCart, removeFromCart } from "../redux/cartSlice";
 import { useState } from "react";
 
+// Product Item Component of in ProductList component
 const ProductItem = ({ product }) => {
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cart.items);
@@ -34,9 +35,11 @@ const handleCartToggle = () => {
       <p className="product-price">Price: ${product.price}</p>
 
       <div className="button-group">
+        {/* // view details of the Product  */}
         <Link to={`/product/${product.id}`}>
           <button className="view-btn">View Details</button>
         </Link>
+        {/* // Add to cart btn  */}
         <button className="cart-btn" onClick={handleCartToggle}>
           {isInCart ? "Remove from Cart" : "Add to Cart"}
         </button>

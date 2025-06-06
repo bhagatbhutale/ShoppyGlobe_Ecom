@@ -4,13 +4,14 @@ import useFetchProducts from '../hooks/useFetchProducts';
 import "./ProductDetail.css"
 import { Link } from 'react-router-dom';
 
+// Product Details 
 const ProductDetail = () => {
-  // Product Details 
   // Extracted the id -- > id specific details of product render
 const { id } = useParams(); 
 const { products, loading, error } = useFetchProducts(); 
 const product = products.find((p) => p.id === parseInt(id)); 
 
+// Loading and error 
 if (loading) return <div className="loading">Loading product...</div>;
 if (error) return <div className="error">Error: {error}</div>;
 if (!product) return <div className="error">Product not found.</div>;

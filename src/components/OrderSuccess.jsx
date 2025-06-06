@@ -2,6 +2,8 @@ import React from "react";
 import "./OrderSuccess.css";
 import { Link } from "react-router-dom";
 
+
+// Order success placed after seeing page
 const OrderSuccess = () => {
   return (
     <div className="order-success-container">

@@ -4,6 +4,7 @@ const initialState = {
   selectedCategory: "All",
 };
 
+// filter a products from seaarching a search bar in nav 
 const filterSlice = createSlice({
   name: "filter",
   initialState,

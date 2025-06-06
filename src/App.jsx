@@ -1,4 +1,6 @@
 import React, { Suspense, lazy } from "react";
+
+// react browser used to Path showing 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Redux used
@@ -22,6 +24,8 @@ const App = () => {
           fallback={<div style={{ textAlign: "center" }}>Loading...</div>}
         >
           <Routes>
+
+            {/* // this is a path and rendering the components  */}
             <Route path="/" element={<Appp />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/product/:id" element={<ProductDetail />} />

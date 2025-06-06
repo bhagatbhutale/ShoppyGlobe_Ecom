@@ -7,6 +7,8 @@ import "./Cart.css";
 const Navbar = lazy(() => import("./Navbar"));
 const CartItem = lazy(() => import("./CartItem"));
 
+
+// this is a Cart Componet of Product to checkout
 const Cart = () => {
   const cartItems = useSelector((state) => state.cart.items);
 
@@ -48,6 +50,7 @@ const Cart = () => {
               </div>
               <Link to="/checkout" className="checkout-link">
                 <div className="cart-check">
+                  {/* // process to check out  */}
                   <button>Process To Checkout</button>
                 </div>
               </Link>

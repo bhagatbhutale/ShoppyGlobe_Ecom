@@ -10,7 +10,7 @@ const searchSlice = createSlice({
     setSearchTerm(state, action) {
       state.searchTerm = action.payload;
     },
-
+// category wise search
     setCategory(state,action) {
         state.category = action.payload
     }

@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
+
+// use useEffect to fetching data from api
 const useFetchProducts = () => {
  
     const [products, setProducts] = useState([])
@@ -28,6 +30,7 @@ const useFetchProducts = () => {
         fetchProducts()
     }, [])
 
+    // Extracting the this value
     return { products, loading, error }
 
 }

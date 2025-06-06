@@ -2,6 +2,8 @@ import "./Checkout.css";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
+
+// this is a check out Page form 
 const Checkout = () => {
  const cartItems = useSelector((state) => state.cart.items);
  const totalProduct = cartItems.reduce((sum, item) => sum + item.quantity, 0);

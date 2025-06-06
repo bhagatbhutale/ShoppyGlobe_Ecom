@@ -21,9 +21,13 @@ const cartSlice = createSlice({
         });
       }
     },
+
+    // remove from cart 
     removeFromCart(state, action) {
       state.items = state.items.filter((item) => item.id !== action.payload);
     },
+
+    // Update the cart count 
     updateCartItem(state, action) {
       const item = state.items.find((item) => item.id === action.payload.id);
       if (item) {

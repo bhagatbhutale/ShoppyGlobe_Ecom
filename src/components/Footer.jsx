@@ -1,5 +1,7 @@
 import "./Footer.css";
 
+
+// this is a footer of the webpage
 const Footer = () => {
   return (
     <footer className="footer">
